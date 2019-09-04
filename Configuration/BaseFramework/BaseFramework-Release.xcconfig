@@ -1,0 +1,2 @@
+#include "../Shared/Shared-Release.xcconfig"
+#include "BaseFramework-Shared.xcconfig"

@@ -1,0 +1,43 @@
+name: XCFrameworkIssue
+options:
+  developmentLanguage: en
+  usesTabs: false
+  indentWidth: 2
+  tabWidth: 2
+  deploymentTarget:
+    iOS: "8.0"
+configs:
+  Debug: debug
+  Release: release
+settings:
+  base:
+    SWIFT_VERSION: "5.1"
+fileGroups: [Configuration]
+targets:
+  BaseFramework:
+    type: framework
+    platform: iOS
+    sources:
+      - path: BaseFramework
+    configFiles:
+      Debug: Configuration/BaseFramework/BaseFramework-Debug.xcconfig
+      Release: Configuration/BaseFramework/BaseFramework-Release.xcconfig
+  DerivedFramework:
+    type: framework
+    platform: iOS
+    sources:
+      - path: DerivedFramework
+    dependencies:
+      - target: BaseFramework
+    configFiles:
+      Debug: Configuration/DerivedFramework/DerivedFramework-Debug.xcconfig
+      Release: Configuration/DerivedFramework/DerivedFramework-Release.xcconfig
+schemes:
+  BaseFramework:
+    build:
+      targets:
+        BaseFramework: all
+  DerivedFramework:
+    build:
+      targets:
+        DerivedFramework: all

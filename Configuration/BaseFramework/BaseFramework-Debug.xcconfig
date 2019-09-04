@@ -1,0 +1,2 @@
+#include "../Shared/Shared-Debug.xcconfig"
+#include "BaseFramework-Shared.xcconfig"
