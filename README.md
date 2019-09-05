@@ -1,6 +1,6 @@
 # XCFrameworkIssue
 
-This repo shows two issues when using XCFramework for inter-framework dependencies with Objective-C compatibility which did not cause any problems when creating *normal* frameworks. It seems that the XCFramework issues can only be resolved when targeting iOS 13.0.
+This repo demonstratres two issues when using XCFramework for inter-framework dependencies with Objective-C compatibility which did not cause any problems when creating *normal* frameworks. It seems that the XCFramework issues can only be resolved when targeting iOS 13.0.
 
 In order to demonstrate the issues just build the `DerivedFramework` target with Xcode 11.0.
 
